@@ -1,0 +1,19 @@
+#prepend_path: /opt/modules/i12g/conda-ensembl-vep/99/bin/vep
+
+vep_test_opts:
+  init_args:
+    genome_assembly: "GRCh38"
+
+    vep_command: "/opt/modules/i12g/conda-ensembl-vep/99/bin/perl /opt/modules/i12g/conda-ensembl-vep/99/bin/vep"
+    vep_cache_dir: "/opt/modules/i12g/conda-ensembl-vep/99/cachedir"
+    vep_plugin_dir: "/opt/modules/i12g/conda-ensembl-vep/99/cachedir/Plugins"
+
+  # gnomad_vcf_file: "/s/raw/ensembl/pub/data_files/homo_sapiens/GRCh37/variation_genotype/gnomad.genomes.r2.0.1.sites.noVEP.vcf.gz"
+  # gnomad_vcf_file: "/s/raw/ensembl/pub/data_files/homo_sapiens/GRCh38/variation_genotype/gnomad.genomes.r2.0.1.sites.GRCh38.noVEP.vcf.gz"
+  predefined_vcf_annotation:
+    dataset: "GnomADg_v3"
+    file_path: "/s/raw/gnomad/3.0/hg38/gnomad.genomes.r3.0.sites.vcf.gz"
+
+  cadd_dir: "/s/raw/cadd/v1.5"
+
+  expected_cmd: /opt/modules/i12g/conda-ensembl-vep/99/bin/perl /opt/modules/i12g/conda-ensembl-vep/99/bin/vep --format vcf --output_file STDOUT --allele_number --total_length --numbers --symbol --ccds --xref_refseq --uniprot --af --max_af --pubmed --canonical --biotype --no_stats --json --merged --dir_cache /opt/modules/i12g/conda-ensembl-vep/99/cachedir --dir_plugin /opt/modules/i12g/conda-ensembl-vep/99/cachedir/Plugins --offline --cache --assembly GRCh38 --sift b --polyphen s --custom /s/raw/gnomad/3.0/hg38/gnomad.genomes.r3.0.sites.vcf.gz,GnomADg_v3,vcf,overlap,0,AF,AF_asj_female,AF_eas_female,AF_afr_male,AF_female,AF_fin_male,AF_oth_female,AF_ami,AF_oth,AF_male,AF_ami_female,AF_afr,AF_eas_male,AF_sas,AF_nfe_female,AF_asj_male,AF_raw,AF_oth_male,AF_nfe_male,AF_asj,AF_amr_male,AF_amr_female,AF_sas_female,AF_fin,AF_afr_female,AF_sas_male,AF_amr,AF_nfe,AF_eas,AF_ami_male,AF_fin_female --plugin CADD,/s/raw/cadd/v1.5/whole_genome_SNVs.tsv.gz,/s/raw/cadd/v1.5/InDels.tsv.gz

@@ -1,0 +1,31 @@
+version_99:
+  #     "--no_check_variants_order",
+  - "--format"
+  - "vcf"
+  - "--output_file"
+  - "STDOUT"
+  #   "--fasta", "/mnt/dbnucleus/dbgenomics/grch37_merged_vep_96/data/human_g1k_v37.fa",
+  - "--allele_number"
+  # this is only needed for online GRCh37 calls
+  #  - "--port"
+  #  - "3337"
+  - "--total_length"  # Give cDNA, CDS and protein positions as Position/Length
+  - "--numbers"  # Adds affected exon and intron numbering to to output. Format is Number/Total
+  - "--symbol"  # Adds gene symbol
+  #     "--hgvs",
+  - "--ccds"  # Adds the CCDS transcript identifer (where available) to the output
+  - "--xref_refseq"  # Output aligned RefSeq mRNA identifier for transcript
+  - "--uniprot"
+  # Adds best match accessions for translated protein products from three UniProt-related databases (SWISSPROT, TREMBL and UniParc) to the output
+  - "--af"
+  # Add the global allele frequency (AF) from 1000 Genomes Phase 3 data for any known co-located variant to the output
+  #  - "--af_gnomad"  # Include allele frequency from Genome Aggregation Database (gnomAD) exome populations
+  - "--max_af"  # Report the highest allele frequency observed in any population from 1000 genomes, ESP or gnomAD
+  - "--pubmed"  # Report Pubmed IDs for publications that cite existing variant
+  - "--canonical"  # Adds a flag indicating if the transcript is the canonical transcript for the gene
+  - "--biotype"  # Adds the biotype of the transcript or regulatory feature
+  - "--no_stats"
+#  - "--cache"
+#  - "--offline"
+  - "--json"
+  - "--merged"

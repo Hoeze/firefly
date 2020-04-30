@@ -1,0 +1,7 @@
+[report]
+omit =
+    setup.py
+    firefly/__main__.py
+    firefly/_version.py
+    versioneer.py
+    tests/*

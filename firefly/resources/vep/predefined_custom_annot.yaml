@@ -1,0 +1,33 @@
+GnomADg_v3:
+  AF: float
+  AF_asj_female: float
+  AF_eas_female: float
+  AF_afr_male: float
+  AF_female: float
+  AF_fin_male: float
+  AF_oth_female: float
+  AF_ami: float
+  AF_oth: float
+  AF_male: float
+  AF_ami_female: float
+  AF_afr: float
+  AF_eas_male: float
+  AF_sas: float
+  AF_nfe_female: float
+  AF_asj_male: float
+  AF_raw: float
+  AF_oth_male: float
+  AF_nfe_male: float
+  AF_asj: float
+  AF_amr_male: float
+  AF_amr_female: float
+  AF_sas_female: float
+  AF_fin: float
+  AF_afr_female: float
+  AF_sas_male: float
+  AF_amr: float
+  AF_nfe: float
+  AF_eas: float
+  AF_ami_male: float
+  AF_fin_female: float
+
